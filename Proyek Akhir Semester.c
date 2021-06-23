@@ -113,19 +113,19 @@ warga *buatinPenduduk(){
 	newNode->next = NULL;//node next belum diisi
 	newNode->gejala = 0;//node gejala belum diisi
 	printf ("|-------------------------------------------------------------------------------------------\n");
-	printf("| Nama penduduk : ");//input nama penduduk
+	printf("| Nama penduduk : ");
 	fflush(stdin);
-	scanf("%[^\n]s", &newNode->nama);
+	scanf("%[^\n]s", &newNode->nama);//input nama menggunakan spasi 
 	
 	printGejala();//call printGejala
 	printf ("|-------------------------------------------------------------------------------------------\n");
-	printf("| Masukkan gejala : \n");//input gejala penduduk
+	printf("| Masukkan gejala : \n");
 	int Gejala[10] = {0,0,0,0,0,0,0,0,0,0};//array gejala belum diisi
 	int input;
 	
 	do{
 		printf ("| ");
-		scanf("%d", &input);
+		scanf("%d", &input);//input gejala penduduk
 		if(input<11 && input>0)//input normal (kondisi tidak error)
 			if(Gejala[input] == 0){//kondisi agar perulangan gejala yang sama per penduduk tidak dijumlahkan
 				Gejala[input] = 1;
