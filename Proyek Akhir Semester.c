@@ -39,7 +39,7 @@ typedef struct daerah{ //Daerah yang akan didata
 	void printsemua(daerah *temp, FILE *fptr, int waktu);//output keterangan program, nama daerah, total penduduk yang positif, dan penduduk yang didata
 
 int main(){
-	daerah *head = NULL;//node awal masih kosong
+	daerah *head = NULL;//node diawal masih kosong
 	daerah *pred = NULL, *temp; //node di daerah
 	warga *Wpred = NULL, *Wtemp;// node di penduduk
 	int Daerah,i,j,del;
@@ -85,7 +85,7 @@ int main(){
 	
 	waktu = (waktu_2 - waktu_1)/6;//total waktu (hari)
 
-	printsemua(head, fptr, waktu);//call printsemua
+	printsemua(head, fptr, waktu);//call fungsi printsemua
 	
 	fclose (fptr);//file ditutup
 	
@@ -155,7 +155,7 @@ daerah *buatinDaerah(){
 	printf("| Jumlah penduduk : ");//input jumlah penduduk
 	scanf("%d", &baru->nWarga);
 	
-	return baru;
+	return baru; 
 }//end *buatinDaerah
 
 
